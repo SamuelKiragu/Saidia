@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// primary color variation
+$p: #0288D1;
+$p_l: #5eb8ff;
+$p_d: #005b9f;
+
+// error colors
+$error1: #d9220f;
+$error2: #df928a;
+
+// colors of text on dark background
+$on_dark: #ffffff;
+
+// colors of text on light background
+$on_light1: #151515;
+$on_light2: #555555;
+$on_light3: #777777;
+
+// background colors
+$background1: #111111;
+$background2: #bbbbbb;
+$background3: #e2e2e2;
+$background4: #ffffff;
+
+
+// small text color:
+$small_color: #5e5e5e;
+
+
+// font
+$font: 'Open Sans', sans-serif;
+
+
+// Styling that should resolve as the default
+
+.backg3{
+  background: $background3;
+}
+
+.bold{
+  color: $background1;
+  font-weight: bold;
+}
+
+.ttle{
+  margin-top: 50px;
+  text-decoration: underline;
+}
+
+*{
+  border: none;
+  color: $on_light2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a{
+  color: $p_d;
+}
+
+button{
+  background: $p;
+  color: $on_dark;
+  margin: 20px 0;
+  padding: 15px 30px;
+}
+
+h2,h3,h4,h5{
+  margin: 20px 0;
+}
+
+input{
+  background: $background3;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  width: 90%;
+}
+
+label{
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+select{
+  display: block;
+  padding: 15px;
+}

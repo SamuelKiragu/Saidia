@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.backg3 {
+  background: #e2e2e2; }
+
+.bold {
+  color: #111111;
+  font-weight: bold; }
+
+* {
+  border: none;
+  color: #555555;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+a {
+  color: #005b9f; }
+
+h2 {
+  margin: 10px 0; }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 20px; }
+
+input {
+  background: #e2e2e2;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  width: 90%; }
+
+button {
+  background: #0288D1;
+  color: #ffffff;
+  margin: 20px 0;
+  padding: 15px 30px; }
+
+select {
+  display: block;
+  padding: 15px; }
+
+#add_orph_cont {
+  background: #b5b5b5;
+  border-radius: 5px;
+  color: #555555;
+  margin-bottom: 30px;
+  padding: 15px 0px 15px 46px;
+  width: 250px; }
+
+.container, .container2 {
+  background: #ffffff;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 45px; }
+
+.container2 {
+  display: block;
+  margin: 10px 0;
+  padding: 20px 35px;
+  width: 400px; }
+
+.orph_cont {
+  background: #fefefe;
+  margin-bottom: 20px;
+  padding: 25px;
+  width: 400px; }
+
+.option {
+  margin-right: 10px; }
+
+.option:hover {
+  cursor: pointer;
+  color: #d9220f; }
+
+#map {
+  height: 400px;
+  margin: 40px;
+  width: 90%; }
+
+.nd_cntainer {
+  box-shadow: 1px 1px 3px #e2e2e2;
+  border-radius: 5px;
+  padding: 20px 30px;
+  margin: 20px 0;
+  width: 248px; }
+
+.comment-cont {
+  background: #e2e2e2;
+  border-bottom: 1px solid #bbbbbb;
+  margin: 10px 0;
+  padding: 10px;
+  position: relative; }
+  .comment-cont p:nth-child(2) {
+    display: inline-block;
+    font-size: 12px;
+    left: 50px;
+    position: relative; }
+
+.error-cont {
+  background: #df928a;
+  border: none;
+  border-radius: 5px;
+  color: #d9220f;
+  font-size: 15px;
+  margin: 0;
+  padding: 2% 51px;
+  width: 267px; }
+
+.error-alt-cont {
+  padding-top: 20px; }
+
+.NeedsContainer .need {
+  background: #0288D1;
+  color: #ffffff;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px; }
+
+/*# sourceMappingURL=orph_cntainer.css.map */

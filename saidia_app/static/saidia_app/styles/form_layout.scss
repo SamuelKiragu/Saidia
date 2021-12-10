@@ -1,0 +1,42 @@
+@import 'conf';
+
+body{
+  background: $background2;
+}
+
+.errorlist{
+  li{
+    color: $error1;
+  }
+}
+
+#FrmDv{
+  background: $background4;
+  border-radius: 2px;
+  font-family: $font;
+  margin: 50px auto;
+  padding: 25px;
+  width: 30%;
+
+  .TtlSct{
+    padding: 20px 0;
+  }
+
+  .FtrSct{
+    border: none;
+  }
+
+  // all division segments
+  div{
+    border-bottom: 3px solid $p_d;
+    color: $on_light2;
+    margin-bottom: 30px;
+  }
+
+
+  .ErrorDiv{
+    border: none;
+    color: $error1;
+    padding: 10px 0px;
+  }
+}

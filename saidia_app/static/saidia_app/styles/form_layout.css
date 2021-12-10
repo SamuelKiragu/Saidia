@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.backg3 {
+  background: #e2e2e2; }
+
+.bold {
+  color: #111111;
+  font-weight: bold; }
+
+* {
+  border: none;
+  color: #555555;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+a {
+  color: #005b9f; }
+
+h2 {
+  margin: 10px 0; }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 20px; }
+
+input {
+  background: #e2e2e2;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  width: 90%; }
+
+button {
+  background: #0288D1;
+  color: #ffffff;
+  margin: 20px 0;
+  padding: 15px 30px; }
+
+select {
+  display: block;
+  padding: 15px; }
+
+body {
+  background: #bbbbbb; }
+
+.errorlist li {
+  color: #d9220f; }
+
+#FrmDv {
+  background: #ffffff;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  margin: 50px auto;
+  padding: 25px;
+  width: 30%; }
+  #FrmDv .TtlSct {
+    padding: 20px 0; }
+  #FrmDv .FtrSct {
+    border: none; }
+  #FrmDv div {
+    border-bottom: 3px solid #005b9f;
+    color: #555555;
+    margin-bottom: 30px; }
+  #FrmDv .ErrorDiv {
+    border: none;
+    color: #d9220f;
+    padding: 10px 0px; }
+
+/*# sourceMappingURL=form_layout.css.map */

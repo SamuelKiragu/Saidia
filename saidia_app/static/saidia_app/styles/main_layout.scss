@@ -1,0 +1,139 @@
+@import 'conf';
+
+body{
+  background: $background3;
+  font-family: $font;
+  height: 100vh;
+  margin: 0;
+}
+
+#lft_div{
+  background: $background4;
+  box-shadow: 1px 1px 3px $background2;
+  color: $on_light2;
+  height: inherit;
+  position: fixed;
+  width: 280px;
+
+  div{
+    display: grid;
+  }
+}
+
+#main_div{
+  float: right;
+  height: inherit;
+  margin: 70px;
+  width: 69%;
+}
+
+
+// left division section
+// styling
+.app_ttl{
+  grid-template-columns: 1fr 4fr;
+  margin-bottom: 10px;
+  width: 100%;
+
+  .app_logo{
+    img{
+      transform: rotate(10deg);
+      filter: grayscale(0.8);
+      height: 73%;
+    }
+  }
+
+  .app_name{
+  }
+}
+
+.srch_sect{
+  background: $background3;
+  margin-bottom: 10px;
+
+  form{
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    height: 45px;
+  }
+
+  input{
+    background: none;
+    border: none;
+    display: inline;
+    height: inherit;
+    margin-bottom: 0;
+    padding: 0px 15px;
+    width: auto;
+  }
+
+  button{
+    background: none;
+    border: none;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    img{
+      height: 20px;
+      padding: 15px;
+    }
+  }
+}
+
+.main_optns{
+  color: $on_light1;
+  margin-top: 75px;
+  position: relative;
+  width: 100%;
+
+  .optn:nth-child(1){
+    background: $p_l;
+    border-right: 5px solid $p_d;
+    position: absolute;
+    top: 1px;
+    width: 91%;
+    z-index: 1;
+  }
+
+  .optn{
+    color: inherit;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+    text-decoration: none;
+    z-index: 2;
+
+    div{
+      grid-template-columns: 1fr 5fr;
+      grid-gap: 5px;
+      height: inherit;
+      margin: auto;
+      width: 120px;
+    }
+    img{
+      height: inherit;
+    }
+  }
+}
+
+.secondary_optns{
+  @extend .main_optns;
+  display: block;
+
+  a{
+    color: $p;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+    width: auto;
+  }
+}
+
+.footer{
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+  a{
+    color: $small_color;
+  }
+}

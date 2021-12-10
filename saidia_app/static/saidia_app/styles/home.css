@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+h2 {
+  margin: 25px 20px; }
+
+.optn:nth-child(1) {
+  background: #5eb8ff; }
+
+/*# sourceMappingURL=home.css.map */
