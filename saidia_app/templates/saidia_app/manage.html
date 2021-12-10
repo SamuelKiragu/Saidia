@@ -1,0 +1,23 @@
+{% extends "saidia_app/manage_layout.html" %}
+
+{% block body %}
+<div id="add_orph_cont">
+  <a href="{% url 'saidia_app:add_orphanage'%}">add orphanage</a>
+</div>
+
+<h2>Orphanages</h2>
+
+{% if orphanages %}
+  {% for orphanage in orphanages %}
+  <div class="orph_cont" data-id="{{orphanage.id}}">
+    <h2>{{orphanage.name}}</h2>
+    <h3>{{orphanage.location}}</h3>
+    <a class="option" href="{% url 'saidia_app:add_need' orphanage.id %}">edit</a>
+    <a class="option" href="{% url 'saidia_app:remove_orphanage' orphanage.id %}">remove</a>
+  </div>
+  {% endfor %}
+{% else %}
+  <h4>There are no orphanages you are currently managing</h4>
+{% endif %}
+
+{% endblock %}

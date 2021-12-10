@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>saidia</title>
+    <link rel="stylesheet" href="{% static 'saidia_app/styles/main_layout.css' %}">
+    <link rel="stylesheet" href="{% static 'saidia_app/styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'saidia_app/styles/orph_cntainer.css' %}">
+    <link rel="stylesheet" href="{% static 'saidia_app/styles/conf.css' %}">
+  </head>
+  <body>
+    {% csrf_token %}
+    <div id="lft_div">
+        <div class="app_ttl">
+          <div class="app_logo">
+            <img src="{% static 'saidia_app/icons/logo.png'%}" alt="saidia">
+          </div>
+          <div class="app_name">
+            <h2>Saidia</h2>
+          </div>
+        </div>
+        <div class="srch_sect">
+          <form action="{% url 'saidia_app:index' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="orphanage" placeholder="search orphanage here">
+            <button type="submit" name="submit">
+              <img src="{%static 'saidia_app/icons/search.svg'%}" alt="">
+            </button>
+          </form>
+        </div>
+
+        <div class="main_optns">
+            <div class="optn" style="top:0px;"></div>
+            <a class="optn" href="{% url 'saidia_app:index'%}">
+              <div>
+                <img src="{%static 'saidia_app/icons/home.svg'%}" alt="home">
+                <p>Home</p>
+              </div>
+            </a>
+            <a class="optn" href="{% url 'saidia_app:manage'%}">
+              <div>
+                <img src="{%static 'saidia_app/icons/manage.png'%}" alt="manage">
+                <p>Manage</p>
+              </div>
+            </a>
+            {% if 'user' in request.session %}
+            <a class="optn" href="{% url 'saidia_app:logout' %}">
+              <div>
+                <img src="{%static 'saidia_app/icons/register.png'%}" alt="register">
+                <p>logout</p>
+              </div>
+            </a>
+            {% else %}
+            <a class="optn" href="{% url 'saidia_app:register' %}">
+              <div>
+                <img src="{%static 'saidia_app/icons/register.png'%}" alt="register">
+                <p>Register</p>
+              </div>
+            </a>
+            {% endif %}
+        </div>
+        <!-- <div class="footer">
+          <a href="#">HELP</a>|
+          <a href="#">ABOUT</a>|
+          <a href="#">TERMS</a>|
+        </div> -->
+    </div>
+    <div id="main_div">
+      {% block body %}{% endblock %}
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7tw0O1sxW-bRcxovqKl_wMXN25_nrSlU"></script>
+    <script src="{% static 'saidia_app/scripts/marker_coordinates.js'%}" charset="utf-8"></script>
+    <script src="{% static 'saidia_app/scripts/main_ui.js'%}" type="text/javascript"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

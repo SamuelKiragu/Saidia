@@ -1,0 +1,22 @@
+{% extends "saidia_app/manage_layout.html" %}
+
+{% load static %}
+
+{% block body %}
+<div class="container">
+  <form action="{% url 'saidia_app:add_orphanage' %}" method="post">
+    {% csrf_token %}
+    {{orphanage_form}}
+    <button type="submit" name="button">add</button>
+  </form>
+  <div id="map">
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'saidia_app/scripts/add_orph_ui.js'%}" charset="utf-8"></script>
+<script src="{% static 'saidia_app/scripts/ajax_rqst.js'%}" charset="utf-8"></script>
+<script src="{% static 'saidia_app/scripts/location_coordinates.js'%}" charset="utf-8"></script>
+<script type="text/javascript">initMap()</script>
+{% endblock %}

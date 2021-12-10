@@ -1,0 +1,29 @@
+{% extends "saidia_app/form_layout.html" %}
+
+{% block title %}
+LOGIN
+{% endblock %}
+
+{% block form_title %}
+LOGIN
+{% endblock %}
+
+{% block form %}
+  <form class="" action="{% url 'saidia_app:login' %}" method="post">
+    {% csrf_token %}
+    {{user_form}}
+    {{auth_form}}
+    <button type="submit" name="submit">LOGIN</button>
+  </form>
+
+  {% if error %}
+  <div class="ErrorDiv">
+    {{error}}
+  </div>
+  {% endif %}
+
+{% endblock %}
+
+{% block footer %}
+<p>are you a manager, <a href="{%url 'saidia_app:register'%}">register</a></p>
+{% endblock %}

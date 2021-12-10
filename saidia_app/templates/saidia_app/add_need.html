@@ -1,0 +1,25 @@
+{% extends "saidia_app/manage_layout.html" %}
+
+{% load static %}
+
+{% block body %}
+<div class="container">
+  <div class="">
+    {% if orph_needs %}
+      {% for need in orph_needs %}
+        <div class="nd_cntainer">
+          <h3>{{need.name}}</h3>
+          <a class="option" href="{% url 'saidia_app:remove_need' orph_id need.id %}">remove</a>
+        </div>
+      {% endfor %}
+    {% else %}
+      no needs currently
+    {% endif %}
+  </div>
+  <form action="{%url 'saidia_app:add_need' orph_id %}" method="post">
+    {% csrf_token %}
+    {{oph_need_form}}
+    <button type="submit" name="button">add</button>
+  </form>
+</div>
+{% endblock %}

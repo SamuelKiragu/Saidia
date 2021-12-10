@@ -1,0 +1,29 @@
+{% extends "saidia_app/user_layout.html" %}
+
+{% load static %}
+
+{% block body %}
+  {% if orphanages %}
+    {% for orphanage in orphanages %}
+    <a class="container2" href = "{% url 'saidia_app:orphanage' orphanage.id %}">
+      <h2>{{orphanage.name}}</h2>
+      <h3>{{orphanage.location}}</h3>
+      <h4>{{orphanage.capacity}} children</h4>
+    </a>
+    {% endfor %}
+  {% else %}
+    <p>there are no orphanages</p>
+  {% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'saidia_app/scripts/validation.js'%}" type="text/javascript"></script>
+<script src="{% static 'saidia_app/scripts/ajax_rqst.js'%}" type="text/javascript"></script>
+<script src="{% static 'saidia_app/scripts/get_user_location.js'%}" type="text/javascript"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded',()=>{
+    getPosition();
+  });
+</script>
+{% endblock %}

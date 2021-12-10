@@ -1,0 +1,10 @@
+{% extends "saidia_app/user_layout.html" %}
+
+{% block body %}
+<div class="error-cont">
+  {{message}}
+</div>
+<div class="error-alt-cont">
+  return <a href="{% url 'saidia_app:index'%}">Home</a>
+</div>
+{% endblock %}

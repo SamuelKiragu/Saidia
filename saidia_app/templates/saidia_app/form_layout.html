@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'saidia_app/styles/form_layout.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <div id="FrmDv">
+      <div class="TtlSct">
+        <h3>{% block form_title %}{% endblock %}</h3>
+      </div>
+      <div class="FrmSct">
+        {% block form %}{% endblock %}
+      </div>
+      <div class="FtrSct">
+        {% block footer %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

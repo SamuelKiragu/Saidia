@@ -1,0 +1,56 @@
+{% extends "saidia_app/user_layout.html" %}
+
+{% block body %}
+<div class="container">
+  <div class="container2">
+    <h1>{{orphanage.name}}</h1>
+    <h3>{{orphanage.location}}</h3>
+    <h4>Capacity: {{orphanage.capacity}} children</h4>
+
+    <h2 class="ttle">Needs</h2>
+    <div class="NeedsContainer">
+      {% if orphanage.needs.all %}
+        {% for need in orphanage.needs.all %}
+          <div class="need">{{need}}</div>
+        {% endfor %}
+      {% else %}
+        <p>There are no needs specified</p>
+      {% endif %}
+    </div>
+
+    <h2 class="ttle">reviews</h2>
+    <!-- TODO: write code to list down avaialable reviews -->
+    <div class="backg3">
+    {% for review in reviews %}
+      <div class="comment-cont">
+        <p>{{review.message}}</p>
+        <p>
+          <span class="bold">by</span>
+          <span>{{review.user.last_name}}</span>
+          <span class="bold">on</span>
+          <span>{{review.datetime}}</span>
+        </p>
+      </div>
+    {% endfor %}
+    </div>
+
+    <form class="" action="{% url 'saidia_app:orphanage' orphanage.id %}" method="post">
+      {% csrf_token %}
+      {{review_form}}
+      <button type="submit" name="button">submit</button>
+    </form>
+  </div>
+  <div id="map">
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript">
+    lat = {{orphanage.x_coordinate}}
+    lng = {{orphanage.y_coordinate}}
+    const myLatLng = {lat : lat, lng: lng}
+    initMap(lat,lng)
+    updateMarker(myLatLng)
+  </script>
+{% endblock %}

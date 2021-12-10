@@ -1,0 +1,22 @@
+{% extends "saidia_app/form_layout.html" %}
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block form_title %}
+REGISTER
+{% endblock %}
+
+{% block form %}
+  <form class="" action="{% url 'saidia_app:register' %}" method="post">
+    {% csrf_token %}
+    {{user_form}}
+    {{auth_form}}
+    <button type="submit" name="submit">REGISTER</button>
+  </form>
+{% endblock %}
+
+{% block footer %}
+<p>Already have an account, <a href="{%url 'saidia_app:login'%}">login</a></p>
+{% endblock %}
