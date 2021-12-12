@@ -4,7 +4,7 @@ Saidia makes it easy for donors to locate orphanages. Using an orphanage list an
 Donor: uses Saidia to find orphanages
 Orphanage Manager: uses Saidia to make their orphanage and its corresponding needs access to the donor.
 ### Development:
-Saidia has been developed using Django, a python framework. Google Maps API has been used to provide the map location feature.
+Saidia's key development tools were Django, a python framework and Google Maps API.
 
 ### Installation & Usage
 #### Prerequisites
