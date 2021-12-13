@@ -38,3 +38,11 @@ Execute the following command:
 Using your browser of choice open the following:
 
     127.0.0.1:8000
+
+### Screenshots
+![Login page][screenshots/saidia17.png]
+![Login page][screenshots/saidia26.png]
+![Login page][screenshots/saidia27.png]
+![Login page][screenshots/saidia28.png]
+![Login page][screenshots/saidia30.png]
+![Login page][screenshots/saidia32.png]
