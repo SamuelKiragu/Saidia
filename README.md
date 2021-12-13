@@ -40,9 +40,20 @@ Using your browser of choice open the following:
     127.0.0.1:8000
 
 ### Screenshots
-![Login page][screenshots/saidia17.png]
-![Login page][screenshots/saidia26.png]
-![Login page][screenshots/saidia27.png]
-![Login page][screenshots/saidia28.png]
-![Login page][screenshots/saidia30.png]
-![Login page][screenshots/saidia32.png]
+#### Adding an orphanage
+![Adding Orphanage Page](./screenshots/saidia17.png)
+
+#### Viewing details of an orphanage
+![Login page](./screenshots/saidia26.png)
+
+#### Registration page
+![Login page](./screenshots/saidia27.png)
+
+#### Login page
+![Login page](./screenshots/saidia28.png)
+
+#### Login validation
+![Login page](./screenshots/saidia30.png)
+
+#### Review section (for donors)
+![Login page](./screenshots/saidia32.png)
